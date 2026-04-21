@@ -47,19 +47,6 @@ const API_KEY = 'abc123yourkeyhere';
 Just open `index.html` in your browser — no build step, no server needed.
 
 ---
-
-## Project Structure
-
-```
-weather-app/
-├── index.html       # App structure and layout
-├── css/
-│   └── style.css    # All styles — blobs, cards, AQI bar, responsive
-├── js/
-│   └── app.js       # API calls, DOM updates, event listeners
-└── README.md
-```
-
 ## API Used
 
 - `GET /data/2.5/weather` — current weather by city or coordinates

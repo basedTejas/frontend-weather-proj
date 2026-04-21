@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Weather Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="logo">Frontend Weather Project</div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search city..." autocomplete="off" />
+        <button id="searchBtn">Search</button>
+        <button id="locationBtn" title="Use my location">Use location</button>
+      </div>
+    </header>
+
+    <div class="error-msg" id="errorMsg" style="display:none;"></div>
+
+    <div class="loading" id="loading" style="display:none;">
+      <div class="spinner"></div>
+      <p>Fetching weather...</p>
+    </div>
+
+    <main class="content" id="content" style="display:none;">
+      <section class="hero-card" id="heroCard">
+        <div class="hero-left">
+          <div class="city-name" id="cityName">--</div>
+          <div class="country" id="country">--</div>
+          <div class="weather-icon" id="weatherIcon">Weather</div>
+          <div class="temp-main" id="tempMain">-- deg</div>
+          <div class="feels-like" id="feelsLike">Feels like -- deg</div>
+          <div class="description" id="description">--</div>
+        </div>
+        <div class="hero-right">
+          <div class="stat-pill">
+            <span class="stat-label">Humidity</span>
+            <span class="stat-value" id="humidity">--%</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Wind</span>
+            <span class="stat-value" id="wind">-- km/h</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Pressure</span>
+            <span class="stat-value" id="pressure">-- hPa</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Visibility</span>
+            <span class="stat-value" id="visibility">-- km</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Sunrise</span>
+            <span class="stat-value" id="sunrise">--</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Sunset</span>
+            <span class="stat-value" id="sunset">--</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="aqi-card" id="aqiCard">
+        <div class="aqi-header">
+          <span class="aqi-title">Air Quality Index</span>
+          <span class="aqi-badge" id="aqiBadge">--</span>
+        </div>
+        <div class="aqi-bar-wrap">
+          <div class="aqi-bar">
+            <div class="aqi-fill" id="aqiFill"></div>
+            <div class="aqi-marker" id="aqiMarker"></div>
+          </div>
+          <div class="aqi-labels">
+            <span>Good</span>
+            <span>Fair</span>
+            <span>Moderate</span>
+            <span>Poor</span>
+            <span>Very Poor</span>
+          </div>
+        </div>
+        <div class="aqi-pollutants" id="aqiPollutants"></div>
+      </section>
+    </main>
+
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">Weather</div>
+      <h2>Search for a city</h2>
+      <p>Type a city name above or use your location to get the current weather and air quality.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

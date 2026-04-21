@@ -1,4 +1,4 @@
-# Weatherly 🌤️
+# Weather 🌤️
 
 A colorful weather dashboard showing real-time weather conditions and air quality index (AQI) for any city — built with vanilla HTML, CSS and JavaScript.
 

@@ -59,5 +59,3 @@ Both are free on OpenWeatherMap's free tier (60 calls/minute).
 Since this is a pure frontend project (no server), you can deploy it anywhere:
 
 - **GitHub Pages** — upload the folder to a repo, enable Pages in settings
-- **Netlify** — drag and drop the folder at netlify.com/drop
-- **Vercel** — connect the repo and deploy with zero config
